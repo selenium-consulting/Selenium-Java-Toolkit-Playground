@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--======================================================================-->
+<!--=                                                                    =-->
+<!--=                            Achtung                                 =-->
+<!--=                                                                    =-->
+<!--=               Wenn dieses File anderst benennt wird,               =-->
+<!--=            Muss der Name auch im Pom angepasst werden              =-->
+<!--=                                                                    =-->
+<!--======================================================================-->
+<suite name="Sample Suite">
+    <test name="Sample Test" parallel="methods" thread-count="5">
+        <groups>
+            <run>
+                <include name="allTests"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.axa.ch.selenium.test.*"/>
+        </packages>
+    </test>
+</suite>

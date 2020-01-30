@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Dependency-Ignored tests",
+    "matchedStatuses": ["skipped"],
+    "messageRegex": ".*depends on not successfully finished.*"
+  },
+  {
+    "name": "Annotation-Ignored tests",
+    "matchedStatuses": ["skipped"],
+    "messageRegex": ".*Test has Attribute enabled = false or @Ignored-Annotation*"
+  },
+  {
+    "name": "Absichtlich Failed",
+    "matchedStatuses": ["broken", "failed"],
+    "messageRegex": ".*Failed.*"
+  }
+]

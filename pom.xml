@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.axa.ch.selenium</groupId>
-    <artifactId>playground</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
-    <name>selenium-playground</name>
+    <artifactId>playground-testNg</artifactId>
+    <version>3.0.0-SNAPSHOT</version>
+    <name>selenium-playground-TestNg</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,28 +15,9 @@
     <dependencies>
         <dependency>
             <groupId>com.github.selenium-consulting</groupId>
-            <artifactId>selenium-java-toolkit</artifactId>
-            <version>2.0.0</version>
+            <artifactId>selenium-java-toolkit-testNg</artifactId>
+            <version>3.0.0</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>ibatis</groupId>
-            <artifactId>ibatis</artifactId>
-            <version>2.3.4.726</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.ibm.db2</groupId>
-            <artifactId>db2jcc4</artifactId>
-            <version>4.19.26</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>
@@ -44,7 +25,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18.1</version>
+                <version>2.22.2</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>

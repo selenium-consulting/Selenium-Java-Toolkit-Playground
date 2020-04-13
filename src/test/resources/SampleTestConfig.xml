@@ -9,7 +9,7 @@
 <!--=            Muss der Name auch im Pom angepasst werden              =-->
 <!--=                                                                    =-->
 <!--======================================================================-->
-<suite name="Sample Suite">
+<suite name="Sample Suite" data-provider-thread-count="5">
     <test name="Sample Test" parallel="methods" thread-count="5">
         <groups>
             <run>

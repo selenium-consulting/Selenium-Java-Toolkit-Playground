@@ -13,7 +13,7 @@ import io.qameta.allure.Feature;
 
 public class DataProviderTest_Kontakt {
 
-    @Test(groups = {"allTests", "dependencyTests", "dataProvider"}, seleniumTest = true, dataProvider = "kontaktProvider", dependsOnGroups = "initTests")
+    @Test(groups = {"allTests", "dependencyTests", "dataProvider"}, seleniumTest = true, dataProvider = "kontaktProvider")
     @Feature("DataProvider")
     public void kontaktWithStandartDataproviderParallel(String name
                                                ,String email
@@ -24,7 +24,7 @@ public class DataProviderTest_Kontakt {
         testeKontakt(name, email, phone, nachricht, ersteFehlermessage, anzFehler);
     }
 
-    @Test(groups = {"allTests", "dependencyTests", "dataProvider"}, seleniumTest = true, dataProvider = "kontaktProviderFromExcel", dependsOnGroups = "initTests")
+    @Test(groups = {"allTests", "dependencyTests", "dataProvider"}, seleniumTest = true, dataProvider = "kontaktProviderFromExcel")
     @Feature("DataProvider")
     public void kontaktWithExcelDataproviderNotParallel(String name
                                                ,String email
@@ -65,7 +65,7 @@ public class DataProviderTest_Kontakt {
         Assert.assertEquals(kontaktPageObject.getSizeOfFehlermeldungList(), anzFehler, "Erwartete Fehlermeldungen");
     }
 
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] kontaktProvider() {
         return new Object[][]{
                 {"Michel", "no Vailid", "052 000 00 00", "Message", "Bitte geben Sie eine gültige E-Mail-Adresse ein.", 2},
@@ -74,7 +74,7 @@ public class DataProviderTest_Kontakt {
         };
     }
 
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] kontaktProviderFromExcel() throws Exception {
         Object[][] testObjArray = ExcelAdapter.getTableArray("testdata/kontaktanfragen.xlsx","Daten");
         return (testObjArray);

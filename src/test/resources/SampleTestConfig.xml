@@ -9,8 +9,8 @@
 <!--=            Muss der Name auch im Pom angepasst werden              =-->
 <!--=                                                                    =-->
 <!--======================================================================-->
-<suite name="Sample Suite" data-provider-thread-count="1">
-    <test name="Sample Test" parallel="methods" thread-count="1">
+<suite name="Sample Suite" data-provider-thread-count="3">
+    <test name="Sample Test" parallel="methods" thread-count="3">
         <groups>
             <run>
                 <include name="allTests"/>

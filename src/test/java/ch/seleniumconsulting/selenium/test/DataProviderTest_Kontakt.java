@@ -1,14 +1,14 @@
-package com.axa.ch.selenium.test;
+package ch.seleniumconsulting.selenium.test;
 
+import ch.seleniumconsulting.selenium.helper.ExcelAdapter;
+import ch.seleniumconsulting.selenium.pageObject.KontaktPageObject;
+import ch.seleniumconsulting.selenium.pageObject.StartseitePageObject;
+import ch.seleniumconsulting.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.util.Strings;
 
-import com.axa.ch.selenium.helper.ExcelAdapter;
-import com.axa.ch.selenium.pageObject.KontaktPageObject;
-import com.axa.ch.selenium.pageObject.StartseitePageObject;
-import com.axa.ch.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import io.qameta.allure.Feature;
 
 public class DataProviderTest_Kontakt {

@@ -1,4 +1,4 @@
-package com.axa.ch.selenium.pageObject.template;
+package ch.seleniumconsulting.selenium.pageObject.template;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

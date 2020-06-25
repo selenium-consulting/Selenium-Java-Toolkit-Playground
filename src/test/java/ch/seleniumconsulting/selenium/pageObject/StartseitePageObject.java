@@ -1,9 +1,8 @@
-package com.axa.ch.selenium.pageObject;
+package ch.seleniumconsulting.selenium.pageObject;
 
+import ch.seleniumconsulting.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.axa.ch.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 
 public class StartseitePageObject extends AbstractSeleniumConsultingPageObject {
 

@@ -1,12 +1,12 @@
-package com.axa.ch.selenium.test;
+package ch.seleniumconsulting.selenium.test;
 
+import ch.seleniumconsulting.selenium.pageObject.DienstleistungPageObject;
+import ch.seleniumconsulting.selenium.pageObject.StartseitePageObject;
+import ch.seleniumconsulting.selenium.pageObject.UeberUnsPageObject;
+import ch.seleniumconsulting.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.axa.ch.selenium.pageObject.DienstleistungPageObject;
-import com.axa.ch.selenium.pageObject.StartseitePageObject;
-import com.axa.ch.selenium.pageObject.UeberUnsPageObject;
-import com.axa.ch.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import io.qameta.allure.Feature;
 
 public class DependencyTest_Startseite {

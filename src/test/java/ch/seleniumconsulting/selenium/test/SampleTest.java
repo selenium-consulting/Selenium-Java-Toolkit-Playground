@@ -1,4 +1,4 @@
-package com.axa.ch.selenium.test;
+package ch.seleniumconsulting.selenium.test;
 
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -10,7 +10,7 @@ public class SampleTest {
 
     @Test(groups = {"allTests"}, seleniumTest = true)
     public void sample() {
-        WebDriverManager.getWebdriver().get("http://www.google.ch");
+        WebDriverManager.getWebdriver().get(TestDataProvider.getTestData("startUrl"));
         System.out.println(TestDataProvider.getTestData("startUrl"));
     }
 }

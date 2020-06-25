@@ -1,4 +1,4 @@
-package com.axa.ch.selenium.pageObject.template;
+package ch.seleniumconsulting.selenium.pageObject.template;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.axa.ch.selenium.pageObject.StartseitePageObject;
+import ch.seleniumconsulting.selenium.pageObject.StartseitePageObject;
 import seleniumConsulting.ch.selenium.framework.driver.WebDriverManager;
 
 public abstract class AbstractSeleniumConsultingPageObject extends AbstractPageObject{

@@ -17,7 +17,7 @@
             </run>
         </groups>
         <packages>
-            <package name="com.axa.ch.selenium.test.*"/>
+            <package name="ch.seleniumconsulting.selenium.test.*"/>
         </packages>
     </test>
 </suite>

@@ -1,4 +1,4 @@
-package com.axa.ch.selenium.helper;
+package ch.seleniumconsulting.selenium.helper;
 
 import java.io.File;
 import java.io.FileInputStream;

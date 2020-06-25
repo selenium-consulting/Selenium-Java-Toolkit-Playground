@@ -1,9 +1,9 @@
-package com.axa.ch.selenium.test;
+package ch.seleniumconsulting.selenium.test;
 
+import ch.seleniumconsulting.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.axa.ch.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import io.qameta.allure.Feature;
 import seleniumConsulting.ch.selenium.framework.driver.WebDriverManager;
 

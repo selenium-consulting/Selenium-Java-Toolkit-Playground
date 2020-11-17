@@ -10,6 +10,9 @@ import org.testng.annotations.Test;
 import org.testng.util.Strings;
 
 import io.qameta.allure.Feature;
+import seleniumConsulting.ch.selenium.framework.screenshot.core.Capture;
+import seleniumConsulting.ch.selenium.framework.screenshot.core.ScreenShootMaker;
+import seleniumConsulting.ch.selenium.framework.screenshot.core.ShootPage;
 
 public class DataProviderTest_Kontakt {
 
@@ -69,8 +72,8 @@ public class DataProviderTest_Kontakt {
     public Object[][] kontaktProvider() {
         return new Object[][]{
                 {"Michel", "no Vailid", "052 000 00 00", "Message", "Bitte geben Sie eine gültige E-Mail-Adresse ein.", 2},
-                {"", "info@selenium-consulting.ch", "", "Message", "Dies ist ein Pflichtfeld.", 2},
-                {"", "", "", "", "Dies ist ein Pflichtfeld.", 4},
+                /*{"", "info@selenium-consulting.ch", "", "Message", "Dies ist ein Pflichtfeld.", 2},
+                {"", "", "", "", "Dies ist ein Pflichtfeld.", 4},*/
         };
     }
 

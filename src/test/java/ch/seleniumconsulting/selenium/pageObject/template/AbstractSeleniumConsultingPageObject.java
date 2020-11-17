@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import ch.seleniumconsulting.selenium.pageObject.StartseitePageObject;
+import seleniumConsulting.ch.selenium.framework.dataLoader.TestDataProvider;
 import seleniumConsulting.ch.selenium.framework.driver.WebDriverManager;
 
 public abstract class AbstractSeleniumConsultingPageObject extends AbstractPageObject{
@@ -26,7 +27,7 @@ public abstract class AbstractSeleniumConsultingPageObject extends AbstractPageO
 
     public static StartseitePageObject loadSeleniumConsultingPage(){
         WebDriverManager.getWebdriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        WebDriverManager.getWebdriver().get("http://www.selenium-consulting.ch");
+        WebDriverManager.getWebdriver().get(TestDataProvider.getTestData("startUrl"));
         return new StartseitePageObject();
     }
 }

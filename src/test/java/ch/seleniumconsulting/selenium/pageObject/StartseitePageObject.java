@@ -8,10 +8,10 @@ public class StartseitePageObject extends AbstractSeleniumConsultingPageObject {
 
 
     @FindBy(id = "dienstleistungen_button")
-    private WebElement dienstleistungenButton;
+    public WebElement dienstleistungenButton;
 
     @FindBy(id = "ueberUns_button")
-    private WebElement ueberUnsButton;
+    public WebElement ueberUnsButton;
 
     public void clickDienstleistungenButton(){
         click(dienstleistungenButton);

@@ -6,8 +6,6 @@ import org.testng.annotations.Test;
 import ch.seleniumconsulting.selenium.pageObject.template.AbstractSeleniumConsultingPageObject;
 import io.qameta.allure.Feature;
 import seleniumConsulting.ch.selenium.framework.driver.WebDriverManager;
-import seleniumConsulting.ch.selenium.framework.screenshot.core.Capture;
-import seleniumConsulting.ch.selenium.framework.screenshot.core.ShootPage;
 
 import java.util.concurrent.TimeUnit;
 

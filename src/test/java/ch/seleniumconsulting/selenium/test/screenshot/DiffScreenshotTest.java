@@ -8,6 +8,7 @@ import seleniumConsulting.ch.selenium.framework.dataLoader.TestDataProvider;
 import seleniumConsulting.ch.selenium.framework.driver.WebDriverManager;
 import seleniumConsulting.ch.selenium.framework.screenshot.core.Capture;
 import seleniumConsulting.ch.selenium.framework.screenshot.core.ScreenShootMaker;
+import seleniumConsulting.ch.selenium.framework.screenshot.utils.image.UnableToCompareImagesException;
 
 import java.io.File;
 
@@ -46,12 +47,14 @@ public class DiffScreenshotTest {
         StartseitePageObject startseitePageObject = AbstractSeleniumConsultingPageObject.loadSeleniumConsultingPage();
         startseitePageObject.topMenuPageObject.clickUeberSelenium();
 
-        Assert.assertFalse(ScreenShootMaker.page.shoot(Capture.FULL_SCROLL, 1500).equalsWithDiff("screenshots/screenshotScrollPageDiffFailed_REV.png", "screenshots/ScreenshotTest_ScreenshotScrollPageDiffFalse")
-                , "Screens" +
-                        "hot should be same, but is not");
-
-        File screenshotFile = new File("screenshots/ScreenshotTest_ScreenshotScrollPageDiffFalse.png");
-        Assert.assertFalse(screenshotFile.exists(), "File should not exist, because Dimensiot missmatch");
+        try {
+            Assert.assertFalse(ScreenShootMaker.page.shoot(Capture.FULL_SCROLL, 1500).equalsWithDiff("screenshots/screenshotScrollPageDiffFailed1_REV.png", "screenshots/ScreenshotTest_ScreenshotScrollPageDiff1False")
+                    , "Screens" +
+                            "hot should be same, but is not");
+            Assert.assertFalse(true, "Dimension Missmatch Exception was not thrown.");
+        } catch (UnableToCompareImagesException unableToCompareImagesException){
+            Assert.assertTrue(true, "Dimension Missmatch Exception was thrown.");
+        }
     }
 
     @Test(groups = {"allTests"}, seleniumTest = true)
@@ -60,10 +63,10 @@ public class DiffScreenshotTest {
         StartseitePageObject startseitePageObject = AbstractSeleniumConsultingPageObject.loadSeleniumConsultingPage();
         startseitePageObject.topMenuPageObject.clickUeberSelenium();
 
-        Assert.assertFalse(ScreenShootMaker.page.shoot(Capture.FULL_SCROLL, 1500).equalsWithDiff("screenshots/screenshotScrollPageDiffFailed_REV.png", "screenshots/ScreenshotTest_ScreenshotScrollPageDiffFalse")
+        Assert.assertFalse(ScreenShootMaker.page.shoot(Capture.FULL_SCROLL, 1500).equalsWithDiff("screenshots/screenshotScrollPageDiffFailed2_REV.png", "screenshots/ScreenshotTest_ScreenshotScrollPageDiff2False")
                 , "Screenshot should be same, but is not");
 
-        File screenshotFile = new File("screenshots/ScreenshotTest_ScreenshotScrollPageDiffFalse.png");
+        File screenshotFile = new File("screenshots/ScreenshotTest_ScreenshotScrollPageDiff2False.png");
         Assert.assertTrue(screenshotFile.exists(), "File should exist");
     }
 
@@ -74,7 +77,7 @@ public class DiffScreenshotTest {
         Assert.assertTrue(ScreenShootMaker.element.shoot(startseitePageObject.dienstleistungenButton).equalsWithDiff("screenshots/screenshotElementDiffSuccess_REV.png", "screenshots/ScreenshotTest_ScreenshotElementDiffSuccess")
                 , "Screenshot should be same, but is not");
 
-        File screenshotFile = new File("screenshots/ScreenshotTest_ScreenshotScrollPageDiffFalse.png");
+        File screenshotFile = new File("screenshots/ScreenshotTest_ScreenshotElementDiffSuccess.png");
         Assert.assertFalse(screenshotFile.exists(), "File should not exist");
     }
 }
